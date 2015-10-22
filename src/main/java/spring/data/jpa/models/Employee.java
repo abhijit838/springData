@@ -19,13 +19,6 @@ public class Employee {
 	private String firstName;
 	@Column(name = "lastname")
 	private String lastName;
-	@ManyToMany
-	@JoinTable(name = "Address", 
-	joinColumns = 
-		@JoinColumn(name = "id", referencedColumnName = "id"),
-	inverseJoinColumns = 
-		@JoinColumn(name = "id", referencedColumnName = "id"))
-	private List<Address> address;
 	
 	public Integer getEmpId() {
 		return empId;
@@ -47,13 +40,5 @@ public class Employee {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public List<Address> getAddress() {
-		return address;
-	}
-	public void setAddress(List<Address> address) {
-		this.address = address;
-	}
-	
-	
-	
+
 }
