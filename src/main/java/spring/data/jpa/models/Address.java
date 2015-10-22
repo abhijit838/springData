@@ -21,8 +21,6 @@ public class Address {
 	private int zipCode;
 	@Column(name = "country")
 	private String country;
-	@ManyToMany(mappedBy = "address")
-	private List<Employee> employees;
 	
 	public Integer getId() {
 		return id;
@@ -48,12 +46,7 @@ public class Address {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public List<Employee> getEmployees() {
-		return employees;
-	}
-	public void setEmployees(List<Employee> employees) {
-		this.employees = employees;
-	}
+	
 	
 	
 }
